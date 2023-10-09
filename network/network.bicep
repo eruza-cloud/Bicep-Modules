@@ -10,7 +10,7 @@ param location string
 param environment string
 param purpose string
 param addressPrefixes array
-param podSubnetPrefix string
+param subnetPrefix string
 param dnsLocation string
 
 var envShort = {
@@ -58,7 +58,7 @@ resource myVNET 'Microsoft.Network/virtualNetworks@2023-05-01' = {
       {
         name: subnetName
         properties: {
-          addressPrefix: podSubnetPrefix
+          addressPrefix: subnetPrefix
           networkSecurityGroup:{
             id:myNSG.id
           }
