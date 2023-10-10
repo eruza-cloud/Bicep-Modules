@@ -11,7 +11,6 @@ param environment string
 param purpose string
 param addressPrefixes array
 param subnetPrefix string
-param dnsLocation string
 
 var envShort = {
   production: 'prd'
@@ -27,7 +26,7 @@ var nsgName = '${subnetName}-nsg'
 
 resource myNSG 'Microsoft.Network/networkSecurityGroups@2023-05-01' = {
   name: nsgName
-  location:dnsLocation
+  location:location
   properties:{
     securityRules:[
       {
