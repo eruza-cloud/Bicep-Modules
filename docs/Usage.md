@@ -1,2 +1,2 @@
 # Usage
-[Back](../)
+[Back](.)
